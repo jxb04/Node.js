@@ -5,6 +5,23 @@ var gradeBook = {
         this._grades.push(newGrade);
     },
 
+    getLetterGrade: function() {
+        if (this.getAverage() >= 90) {
+            return "A";
+        }
+        else if (this.getAverage() >= 80) {
+            return "B";
+        }
+        else if (this.getAverage() >= 70) {
+            return "C";
+        }
+        else if (this.getAverage() >= 60) {
+            return "D";
+        }
+        return "F";
+
+    },
+
     getCountOfGrades: function() {
         return this._grades.length;
     },
